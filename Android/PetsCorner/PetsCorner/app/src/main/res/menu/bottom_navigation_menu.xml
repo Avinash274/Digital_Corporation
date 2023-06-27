@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_home"
+        android:icon="@drawable/clip_home"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/bottom_search_pets"
+        android:icon="@drawable/clip_search"
+        android:title="Search"/>
+
+
+    <item
+        android:id="@+id/bottom_pet_requests"
+        android:icon="@drawable/clip_pet"
+        android:title="Requests"/>
+
+
+    <item
+        android:id="@+id/bottom_add"
+        android:icon="@drawable/clip_add"
+        android:title="Upload"/>
+
+
+    <item
+        android:id="@+id/bottom_account"
+        android:icon="@drawable/clip_account"
+        android:title="My Profile"/>
+
+
+</menu>

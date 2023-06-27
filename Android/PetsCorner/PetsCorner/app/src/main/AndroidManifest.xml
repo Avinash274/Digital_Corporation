@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.petscorner">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/pet_splash_logo_two"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/pet_splash_logo_two"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SplashScreen"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+
+        <activity
+            android:name=".My_Uploads_Posts"
+            android:exported="false"
+            android:label="@string/title_activity_my_uploads_posts"
+            android:theme="@style/Theme.TabLayout.NoActionBar"/>
+
+        <activity
+            android:name=".Search_Page_Three_Result"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PetsCorner_Two" />
+        <activity
+            android:name=".View_Events_List"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PetsCorner_Two" />
+        <activity
+            android:name=".View_Pet_Requests"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PetsCorner_Two" />
+        <activity
+            android:name=".Upload_Profile_Picture"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PetsCorner_Two" />
+        <activity
+            android:name=".Pet_Detailed_Information"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PetsCorner_Two" />
+        <activity
+            android:name=".Search_Pets_Second_Page"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PetsCorner_Two"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Upload_Pet_Details_Page"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PetsCorner_Two"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Search_Pets_First_Page"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PetsCorner_Two"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Pet_Request_Form"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PetsCorner_Two"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Event_Detailed_Information"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PetsCorner_Two" />
+        <activity
+            android:name=".Upload_Event_Details_Form_Page"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PetsCorner_Two"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".My_Profile_Page"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SplashScreen" />
+        <activity
+            android:name=".Change_Password_Success_Page"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SplashScreen" />
+        <activity
+            android:name=".Change_Password_Page_Two"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PetsCorner_Two"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Change_Password_Page"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PetsCorner_Two"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Contact_Us_Page"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PetsCorner_Two" />
+        <activity
+            android:name=".My_Account_Page"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PetsCorner_Two" />
+        <activity
+            android:name=".Home_Page"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/Theme.PetsCorner_Two" />
+        <activity
+            android:name=".Create_Account_Four"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SplashScreen" />
+        <activity
+            android:name=".Create_Account_Three"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SplashScreen"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Create_Account_Email_Validation_Otp"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SplashScreen" />
+        <activity
+            android:name=".Create_Account_Email_Validation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SplashScreen"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name=".Forgot_Password_Fifth"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SplashScreen" />
+        <activity
+            android:name=".Forgot_Password_Four"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SplashScreen" />
+        <activity
+            android:name=".Forgot_Password_Three"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SplashScreen"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name=".Forgot_Password_Two"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SplashScreen" />
+        <activity
+            android:name=".Forgot_Password_One"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SplashScreen"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".Login_Page"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Account_Selection_Page"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SplashScreen" />
+        <activity
+            android:name=".onBoarding_Page"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SplashScreen" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

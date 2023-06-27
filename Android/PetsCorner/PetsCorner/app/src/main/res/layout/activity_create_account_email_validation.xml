@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="none"
+    android:padding="18dp"
+    tools:context=".Create_Account_Email_Validation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/createAccountBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/clip_back_arrow"
+            app:tint="@color/black"
+            android:padding="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/akaya_telivigala"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="Create Account"
+            android:textAllCaps="false"
+            android:textColor="@color/button_color"
+            android:includeFontPadding="false"
+            android:textSize="35dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins"
+            android:text="Enter email address to continue to register your account with  Pets Corner."
+            android:lineSpacingExtra="7dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/account_email_creation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeColor="@color/button_color"
+            app:boxStrokeWidthFocused="2dp"
+            android:hint="Enter email-id"
+            app:startIconDrawable="@drawable/clip_mail_outline"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/black"
+            app:hintTextColor="@color/black"
+            app:boxStrokeErrorColor="#FF0000"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/getemail_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:textSize="18dp"
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionDone"
+                android:fontFamily="@font/akaya_telivigala"
+                android:textColor="@color/app_color"
+                android:textCursorDrawable="@null"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/verify_email_id"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/verify"
+            android:backgroundTint="@color/button_color"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:textSize="17sp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</ScrollView>

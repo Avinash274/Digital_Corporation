@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/clip_home"
+            android:title="Home"/>
+
+        <item
+            android:id="@+id/nav_search_pets"
+            android:icon="@drawable/clip_search"
+            android:title="@string/search_pets"/>
+
+        <item
+            android:id="@+id/add_pets_requests"
+            android:icon="@drawable/clip_upload"
+            android:title="@string/upload_pets"/>
+
+        <item
+            android:id="@+id/add_events"
+            android:icon="@drawable/clip_add_event"
+            android:title="@string/add_events"/>
+
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="User Info">
+
+            <menu>
+                <group>
+                    <item
+                        android:id="@+id/profile"
+                        android:icon="@drawable/clip_person"
+                        android:title="Profile"/>
+                </group>
+            </menu>
+
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="App">
+
+            <menu>
+                <group>
+                    <item
+                        android:id="@+id/change_password"
+                        android:icon="@drawable/clip_lock_outline"
+                        android:title="Change Password"/>
+
+                    <item
+                        android:id="@+id/contact_us"
+                        android:icon="@drawable/clip_call"
+                        android:title="Contact Us"/>
+                </group>
+            </menu>
+
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Authenticate">
+
+            <menu>
+                <group>
+
+                    <item
+                        android:id="@+id/logout"
+                        android:icon="@drawable/clip_logout"
+                        android:title="Logout"/>
+
+                </group>
+            </menu>
+
+        </item>
+    </group>
+</menu>

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home_Page">
+
+    <!--    //code for bottom navigation bar-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_navigation_menu"
+            app:labelVisibilityMode="labeled"
+            app:itemTextColor="@drawable/bottom_nav_item_color"
+            app:itemIconTint="@drawable/bottom_nav_item_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    //code for side navigation bar-->
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_above="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:id="@+id/mainContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_above="@+id/bottomView">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:isScrollContainer="true"
+                android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/main_title_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp">
+
+                    <TextView
+                        android:id="@+id/event_Date_textView"
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:fontFamily="@font/patua_one"
+                        android:text="@string/home_page_name"
+                        android:textColor="@color/button_color"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="6dp"
+                        android:layout_toEndOf="@+id/event_Date_textView"
+                        android:fontFamily="@font/corben"
+                        android:text="Your Location"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/button_color"
+                        android:textSize="14dp" />
+
+            </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mainTitleSub"
+                    android:layout_below="@+id/main_title_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:id="@+id/pettagline"
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="cursive"
+                        android:text="Life is better with pets"
+                        android:textColor="#595959"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@+id/pettagline"
+                        android:fontFamily="@font/corben"
+                        android:layout_marginTop="-2dp"
+                        android:text="India"
+                        android:textAlignment="viewEnd"
+                        android:textColor="#595959"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                  android:id="@+id/searchLayout"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/mainTitleSub"
+                  android:layout_marginTop="32dp"
+                  android:layout_marginStart="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/searchBarLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/searchText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Search Pets"
+                            android:textStyle="normal"
+                            android:fontFamily="@font/patua_one"
+                            android:drawableLeft="@drawable/clip_search"
+                            android:drawablePadding="12dp"
+                            android:enabled="true"/>
+
+                    </LinearLayout>
+
+                 </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_below="@+id/searchLayout"
+                    android:id="@+id/categoryTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:id="@+id/pet_category"
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/patua_one"
+                        android:text="Categories"
+                        android:textColor="@color/button_color"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        android:id="@+id/viewAllCategories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="4dp"
+                        android:layout_toEndOf="@+id/pet_category"
+                        android:fontFamily="@font/corben"
+                        android:text="View All"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/button_color"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_below="@+id/categoryTitle"
+                    android:id="@+id/categorySutTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:id="@+id/categorySubtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="These are our main categories of animals. Slide the grid to see more!"
+                        android:textColor="#595959"
+                        android:textSize="12dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/categoryListItems"
+                    android:layout_below="@+id/categorySutTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_below="@+id/categoryListItems"
+                    android:id="@+id/popularDogs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:id="@+id/dogsTitel"
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/patua_one"
+                        android:text="Popular Dog Breeds"
+                        android:textColor="@color/button_color"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        android:id="@+id/dogViewall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="4dp"
+                        android:layout_toEndOf="@+id/dogsTitel"
+                        android:fontFamily="@font/corben"
+                        android:text="View All"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/button_color"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_below="@+id/popularDogs"
+                    android:id="@+id/popularDogSubtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:id="@+id/ppTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="These are our most popular dog breeds. Slide the grid to see more!"
+                        android:textColor="#595959"
+                        android:textSize="12dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ppReccylerView"
+                    android:layout_below="@+id/popularDogSubtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_below="@+id/ppReccylerView"
+                    android:id="@+id/ppEvents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:id="@+id/eventTitle"
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/patua_one"
+                        android:text="Events Around You"
+                        android:textColor="@color/button_color"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        android:id="@+id/vEvents"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="4dp"
+                        android:layout_toEndOf="@+id/eventTitle"
+                        android:fontFamily="@font/corben"
+                        android:text="View All"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/button_color"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_below="@+id/ppEvents"
+                    android:id="@+id/eventSubtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:id="@+id/eTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="These are our most popular events around you. Slide the grid to see more!"
+                        android:textColor="#595959"
+                        android:textSize="12dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/eventRecycler"
+                    android:layout_below="@+id/eventSubtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="30dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/recyclerview2"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:headerLayout="@layout/header_menu"
+            app:menu="@menu/main_menu"
+            android:layout_gravity="start"/>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>

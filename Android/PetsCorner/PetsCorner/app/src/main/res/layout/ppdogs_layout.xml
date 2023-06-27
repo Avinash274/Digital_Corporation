@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutViewPetRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/petCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            app:cardElevation="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_of_the_person"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pet_image_slider_five" />
+
+                <TextView
+                    android:id="@+id/person_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@+id/image_of_the_person"
+                    android:fontFamily="@font/poppins_bold"
+                    android:includeFontPadding="false"
+                    android:text="Shashank Divate "
+                    android:textColor="@color/button_color"
+                    android:textSize="16sp"
+                    tools:ignore="RtlSymmetry" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_alignParentEnd="true"
+                    android:layout_above="@+id/underline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    app:cardBackgroundColor="@color/button_color"
+                    app:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true">
+
+                            <ImageView
+                                android:id="@+id/rupees_symbol"
+                                android:layout_width="20dp"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_alignParentLeft="true"
+                                android:src="@drawable/clip_price_rupees"
+                                app:tint="@color/white" />
+
+                            <TextView
+                                android:id="@+id/requests"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_toEndOf="@+id/rupees_symbol"
+                                android:fontFamily="@font/poppins_bold"
+                                android:includeFontPadding="false"
+                                android:text="1200"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/no_of_posts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/person_name"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@id/image_of_the_person"
+                    android:fontFamily="@font/poppins"
+                    android:text="poojapattar@gmail.com"
+                    android:textSize="10sp" />
+
+                <View
+                    android:id="@+id/underline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/no_of_posts"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#7C7979" />
+
+                <ImageView
+                    android:id="@+id/imagePost"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/underline"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="6dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/d_seven"
+                    app:riv_corner_radius="8dp" />
+
+                <TextView
+                    android:id="@+id/imageTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/underline"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@+id/imagePost"
+                    android:fontFamily="@font/marko_one"
+                    android:text="Charlie"
+                    android:textColor="@color/button_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/dateIcon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_below="@+id/imageTitle"
+                    android:layout_marginTop="4dp"
+                    android:layout_toEndOf="@+id/imagePost"
+                    android:src="@drawable/clip_pet" />
+
+                <TextView
+                    android:id="@+id/dateTextView"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageTitle"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_toEndOf="@+id/dateIcon"
+                    android:fontFamily="@font/autour_one"
+                    android:text="Golden Retriever"
+                    android:textColor="#7C7979"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/genderSymbol"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_below="@+id/dateIcon"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@+id/imagePost"
+                    android:src="@drawable/clip_gender"
+                    app:tint="?attr/colorControlNormal" />
+
+                <TextView
+                    android:id="@+id/request_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dateTextView"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@+id/genderSymbol"
+                    android:fontFamily="@font/autour_one"
+                    android:includeFontPadding="false"
+                    android:text="Male"
+                    android:textColor="#7C7979"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/book_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/genderSymbol"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@+id/imagePost"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/autour_one"
+                    android:justificationMode="inter_word"
+                    android:maxWidth="210dp"
+                    android:maxLines="5"
+                    android:text="@string/lorem"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

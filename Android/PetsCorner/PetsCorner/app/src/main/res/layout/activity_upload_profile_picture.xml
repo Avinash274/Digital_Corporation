@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Upload_Profile_Picture">
+
+        <RelativeLayout
+        android:id="@+id/reset_password_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:id="@+id/main_title_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/set_new_password_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/akaya_telivigala"
+                android:text="Hello there ! "
+                android:textColor="@color/button_color"
+                android:textSize="35sp" />
+
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_toEndOf="@+id/set_new_password_title"
+                android:fontFamily="@font/akaya_telivigala"
+                android:text=""
+                android:textColor="@color/button_color"
+                android:textSize="35sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/set_new_password_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_title_tag"
+            android:layout_gravity="center"
+            android:layout_marginTop="-18dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="Upload the profile image and keep updated.."
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/imageofCrop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/set_new_password_description">
+
+            <ImageView
+                android:id="@+id/cropImage"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dotted_border" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/add_image_title"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/clip_simple_plus"/>
+
+            <TextView
+                android:id="@+id/add_image_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/akaya_telivigala"
+                android:text="Add Image"
+                android:textColor="@color/black"></TextView>
+
+        </RelativeLayout>
+
+            <Button
+                android:id="@+id/signup_next_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/imageofCrop"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/button_color"
+                android:elevation="5dp"
+                android:text="Upload"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:transitionName="transition_next_btn" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

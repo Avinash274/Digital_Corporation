@@ -1,0 +1,76 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.example.petscorner"
+        minSdk 23
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    implementation 'com.google.android.gms:play-services-cast-framework:21.0.1'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    //gif implementation
+    implementation 'com.airbnb.android:lottie:3.4.0'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+
+    //pin view implementation
+    implementation 'com.chaos.view:pinview:1.4.3'
+
+    //round-image implementation
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //read-more option implementation
+    implementation 'com.borjabravo:readmoretextview:2.1.0'
+
+    //round-image for search pets implementation
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //implementation of dependency used to connect database
+    implementation 'com.android.volley:volley:1.1.1'
+
+    //implementation of material alert dialog box
+    implementation 'dev.shreyaspatil.MaterialDialog:MaterialDialog:2.2.3'
+
+    //glide implementation for displaying images
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+
+    implementation 'com.karumi:dexter:6.2.3'
+
+}

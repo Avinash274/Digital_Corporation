@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Upload_Event_Details_Form_Page">
+
+    <!--    //code for bottom navigation bar-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_navigation_menu"
+            app:labelVisibilityMode="labeled"
+            app:itemTextColor="@drawable/bottom_nav_item_color"
+            app:itemIconTint="@drawable/bottom_nav_item_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    //code for side navigation bar-->
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_above="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:isScrollContainer="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/reset_password_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/set_new_password_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/akaya_telivigala"
+                            android:gravity="left"
+                            android:text="Basic Details"
+                            android:textColor="@color/button_color"
+                            android:textSize="25sp" />
+
+
+                        <TextView
+                            android:id="@+id/set_new_password_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/set_new_password_title"
+                            android:layout_gravity="left"
+                            android:layout_marginTop="-15dp"
+                            android:fontFamily="@font/poppins"
+                            android:lineSpacingExtra="5dp"
+                            android:text="This section contains the basic details of your event."
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/reset_password_title"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/signup_fullname"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Event Title"
+                            app:boxStrokeColor="@color/button_color"
+                            app:boxStrokeWidthFocused="2dp"
+                            app:startIconDrawable="@drawable/clip_person"
+                            app:errorEnabled="true"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="30">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/fullname"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/akaya_telivigala"
+                                android:inputType="textCapWords|textPersonName"
+                                android:lines="1"
+                                android:maxLength="30"
+                                android:textSize="18sp"
+                                android:textColor="@color/app_color"
+                                android:textCursorDrawable="@null" />
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/event_date"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Event Date"
+                                app:boxStrokeColor="@color/button_color"
+                                app:boxStrokeWidthFocused="2dp"
+                                android:clickable="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                app:startIconDrawable="@drawable/clip_add_event"
+                                app:errorEnabled="true">
+
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/eventDate_editText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/akaya_telivigala"
+                                    android:inputType="date"
+                                    android:lines="1"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/app_color"
+                                    android:textCursorDrawable="@null" />
+
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/event_time"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Event Time"
+                                android:layout_alignParentRight="true"
+                                app:startIconDrawable="@drawable/clip_clock"
+                                app:boxStrokeColor="@color/button_color"
+                                app:boxStrokeWidthFocused="2dp"
+                                android:clickable="false"
+                                android:cursorVisible="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                app:errorEnabled="true">
+
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/eventTimeEditText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/akaya_telivigala"
+                                    android:inputType="time"
+                                    android:lines="1"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/app_color"
+                                    android:textCursorDrawable="@null" />
+
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </RelativeLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/signup_email"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Event Description"
+                            android:layout_marginTop="5dp"
+                            app:boxStrokeColor="@color/button_color"
+                            app:boxStrokeWidthFocused="2dp"
+                            app:endIconMode="clear_text"
+                            app:startIconDrawable="@drawable/clip_event_details"
+                            app:errorEnabled="true"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="300">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/bookDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxHeight="300dp"
+                                android:scrollbars="vertical"
+                                android:gravity="top|left"
+                                android:scrollbarSize="1dp"
+                                android:maxLength="300"
+                                android:textSize="18sp"
+                                android:inputType="text|textCapSentences|textMultiLine"
+                                android:fontFamily="@font/akaya_telivigala"
+                                android:textColor="@color/app_color"
+                                android:textCursorDrawable="@null"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/location"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Event location"
+                            app:boxStrokeColor="@color/button_color"
+                            app:boxStrokeWidthFocused="2dp"
+                            app:endIconMode="clear_text"
+                            app:startIconDrawable="@drawable/clip_location"
+                            app:errorEnabled="true"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="20">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/location_edittext"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/akaya_telivigala"
+                                android:inputType="textCapWords|textPersonName"
+                                android:lines="1"
+                                android:maxLength="20"
+                                android:textSize="18sp"
+                                android:textColor="@color/app_color"
+                                android:textCursorDrawable="@null" />
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/state"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter State"
+                            app:boxStrokeColor="@color/button_color"
+                            app:boxStrokeWidthFocused="2dp"
+                            app:endIconMode="clear_text"
+                            app:startIconDrawable="@drawable/clip_state"
+                            app:errorEnabled="true"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="20">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/state_edittext"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/akaya_telivigala"
+                                android:inputType="textCapWords|textPersonName"
+                                android:lines="1"
+                                android:maxLength="20"
+                                android:textSize="18sp"
+                                android:textColor="@color/app_color"
+                                android:textCursorDrawable="@null" />
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/contactNumber"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Contact Number"
+                            app:boxStrokeColor="@color/button_color"
+                            app:boxStrokeWidthFocused="2dp"
+                            app:endIconMode="clear_text"
+                            app:startIconDrawable="@drawable/clip_call"
+                            app:errorEnabled="true"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="10">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/contactNumberEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/akaya_telivigala"
+                                android:inputType="phone"
+                                android:lines="1"
+                                android:maxLength="10"
+                                android:textSize="18sp"
+                                android:textColor="@color/app_color"
+                                android:textCursorDrawable="@null" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/registrationLink"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Event Link"
+                            app:boxStrokeColor="@color/button_color"
+                            app:boxStrokeWidthFocused="2dp"
+                            app:endIconMode="clear_text"
+                            app:startIconDrawable="@drawable/clip_registration_link"
+                            app:errorEnabled="true">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/registrationLinkEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/akaya_telivigala"
+                                android:inputType="textWebEditText"
+                                android:lines="1"
+                                android:textSize="18sp"
+                                android:textColor="@color/app_color"
+                                android:textCursorDrawable="@null" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/imageofCrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/cropImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:layout_marginTop="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/dotted_border" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerInParent="true"
+                                android:layout_toLeftOf="@+id/add_image_title"
+                                android:layout_marginRight="5dp"
+                                android:src="@drawable/clip_simple_plus"/>
+
+                            <TextView
+                                android:id="@+id/add_image_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Add Image"
+                                android:fontFamily="@font/akaya_telivigala"
+                                android:textColor="@color/black"
+                                android:layout_centerInParent="true"
+                                android:layout_centerHorizontal="true">
+                            </TextView>
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/signup_next_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="12dp"
+                            android:backgroundTint="@color/button_color"
+                            android:elevation="5dp"
+                            android:text="Upload"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:transitionName="transition_next_btn" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:headerLayout="@layout/header_menu"
+            app:menu="@menu/main_menu"
+            android:layout_gravity="start"/>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>

@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Upload_Pet_Details_Page">
+
+    <!--    //code for bottom navigation bar-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_navigation_menu"
+            app:labelVisibilityMode="labeled"
+            app:itemTextColor="@drawable/bottom_nav_item_color"
+            app:itemIconTint="@drawable/bottom_nav_item_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    //code for side navigation bar-->
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_above="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:isScrollContainer="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/reset_password_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/set_new_password_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/akaya_telivigala"
+                            android:gravity="left"
+                            android:text="Basic Pet Details"
+                            android:textColor="@color/button_color"
+                            android:textSize="25sp" />
+
+
+                        <TextView
+                            android:id="@+id/set_new_password_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/set_new_password_title"
+                            android:layout_gravity="left"
+                            android:layout_marginTop="-15dp"
+                            android:fontFamily="@font/poppins"
+                            android:lineSpacingExtra="5dp"
+                            android:text="This section contains the basic details of your pet."
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/reset_password_title"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/pet_category"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Pet Category"
+                            app:startIconDrawable="@drawable/clip_pet_category"
+                            app:boxStrokeColor="@color/button_color"
+                            app:boxStrokeWidthFocused="2dp"
+                            app:errorEnabled="true"
+                            app:startIconTint="@color/black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/autoCompleteTextView1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:textSize="18sp"
+                                android:textColor="@color/app_color"
+                                android:fontFamily="@font/akaya_telivigala"
+                                android:inputType="none" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/signup_fullname"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Pet Name"
+                            app:boxStrokeColor="@color/button_color"
+                            app:boxStrokeWidthFocused="2dp"
+                            app:endIconMode="clear_text"
+                            app:startIconDrawable="@drawable/clip_pet"
+                            app:errorEnabled="true"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="30">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/fullname"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/akaya_telivigala"
+                                android:inputType="textCapWords|textPersonName"
+                                android:lines="1"
+                                android:textColor="@color/app_color"
+                                android:maxLength="30"
+                                android:textSize="18sp"
+                                android:textCursorDrawable="@null" />
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/event_date"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Age"
+                                app:boxStrokeColor="@color/button_color"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:startIconDrawable="@drawable/clip_add_event"
+                                app:errorEnabled="true">
+
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/eventDate_editText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/akaya_telivigala"
+                                    android:inputType="number"
+                                    android:lines="1"
+                                    android:maxLength="2"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/app_color"
+                                    android:textCursorDrawable="@null" />
+
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/event_time"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="180dp"
+                                android:layout_height="95dp"
+                                android:hint="Gender"
+                                android:layout_alignParentEnd="true"
+                                app:startIconDrawable="@drawable/clip_gender"
+                                app:boxStrokeColor="@color/button_color"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:errorEnabled="true">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/autoCompleteTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/app_color"
+                                    android:fontFamily="@font/akaya_telivigala"
+                                    android:inputType="none" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </RelativeLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/pet_breed"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Pet Breed"
+                            app:boxStrokeColor="@color/button_color"
+                            app:boxStrokeWidthFocused="2dp"
+                            app:endIconMode="clear_text"
+                            app:startIconDrawable="@drawable/clip_pet"
+                            app:errorEnabled="true"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="30">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/petBreedEdittext"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/akaya_telivigala"
+                                android:inputType="textCapWords|textPersonName"
+                                android:lines="1"
+                                android:maxLength="30"
+                                android:textSize="18sp"
+                                android:textColor="@color/app_color"
+                                android:textCursorDrawable="@null" />
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/signup_email"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="About Pet"
+                            android:layout_marginTop="5dp"
+                            app:boxStrokeColor="@color/button_color"
+                            app:boxStrokeWidthFocused="2dp"
+                            app:endIconMode="clear_text"
+                            app:startIconDrawable="@drawable/clip_description"
+                            app:errorEnabled="true"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="400">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/bookDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxHeight="300dp"
+                                android:scrollbars="vertical"
+                                android:gravity="top|left"
+                                android:scrollbarSize="1dp"
+                                android:maxLength="400"
+                                android:textSize="18sp"
+                                android:inputType="text|textCapSentences|textMultiLine"
+                                android:fontFamily="@font/akaya_telivigala"
+                                android:textColor="@color/app_color"
+                                android:textCursorDrawable="@null"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/petPrice"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Pet Price"
+                                app:boxStrokeColor="@color/button_color"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:startIconDrawable="@drawable/clip_price_rupees"
+                                app:errorEnabled="true">
+
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/petPriceEditText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/akaya_telivigala"
+                                    android:inputType="number"
+                                    android:lines="1"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/app_color"
+                                    android:textCursorDrawable="@null" />
+
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/priceType"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="180dp"
+                                android:layout_height="95dp"
+                                android:hint="Price Type"
+                                android:layout_alignParentEnd="true"
+                                app:startIconDrawable="@drawable/clip_price_type"
+                                app:boxStrokeColor="@color/button_color"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:errorEnabled="true">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/autoCompleteTextView3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/akaya_telivigala"
+                                    android:inputType="none"
+                                    android:textColor="@color/app_color"
+                                    android:textSize="16sp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </RelativeLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/location"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Pet location/City"
+                            app:boxStrokeColor="@color/button_color"
+                            app:boxStrokeWidthFocused="2dp"
+                            app:endIconMode="clear_text"
+                            app:startIconDrawable="@drawable/clip_location"
+                            app:errorEnabled="true"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="20">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/location_edittext"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/akaya_telivigala"
+                                android:inputType="textCapWords|textPersonName"
+                                android:lines="1"
+                                android:maxLength="20"
+                                android:textSize="18sp"
+                                android:textColor="@color/app_color"
+                                android:textCursorDrawable="@null" />
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/imageofCrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/cropImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:layout_marginTop="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/dotted_border" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerInParent="true"
+                                android:layout_toLeftOf="@+id/add_image_title"
+                                android:layout_marginRight="5dp"
+                                android:src="@drawable/clip_simple_plus"/>
+
+                            <TextView
+                                android:id="@+id/add_image_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Add Image"
+                                android:fontFamily="@font/akaya_telivigala"
+                                android:textColor="@color/black"
+                                android:layout_centerInParent="true"
+                                android:layout_centerHorizontal="true">
+                            </TextView>
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/signup_next_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="12dp"
+                            android:backgroundTint="@color/button_color"
+                            android:elevation="5dp"
+                            android:text="Upload"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:transitionName="transition_next_btn" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:headerLayout="@layout/header_menu"
+            app:menu="@menu/main_menu"
+            android:layout_gravity="start"/>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>

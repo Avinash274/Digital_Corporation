@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">PetsCorner</string>
+
+    <string name="first_slide_title">Meet your next pet</string>
+    <string name="second_slide_title">Find your favourite pet</string>
+    <string name="third_slide_title">Welcome to Pets Corner</string>
+
+    <string name="first_slide_desc">Discover thousands of healthy pets waiting for loving homes.</string>
+    <string name="second_slide_desc">Find the best pet near you and adopt your favourite one.</string>
+    <string name="third_slide_desc">We will help to choose the best buddy that fits your family and home perfectly.</string>
+
+    <string name="skip_btn">Skip</string>
+    <string name="next_btn">Next</string>
+    <string name="let_get_started">Lets Gets Started</string>
+
+    <string name="yourpetsmarket">Your Pet\'s Market</string>
+    <string name="yourpetsdesc">"Life is better with pets"</string>
+    <string name="already_have_an_account">Did not receive the email? Check your spam filter, or <font color='#eb4a69'>try another email address</font></string>
+    <string name="verify">Verify &amp; Proceed</string>
+    <string name="createAccount">SignUp</string>
+    <string name="alreadyhaveaccount">Already have an account? <font color='#eb4a69'>Login</font></string>
+
+    <string name="account_registered">You have successfully registered and now have access to the numerous benefits this platform provides.Detailed instructions have been sent to your email address.</string>
+
+    <string name="search_pets">Search Pet\'s</string>
+    <string name="upload_pets">Upload Pet\'s</string>
+    <string name="add_events">Add Event\'s</string>
+
+    <string name="menu_open">Open</string>
+    <string name="menu_close">Close</string>
+    <string name="title_activity_home_page_two">Home_Page_Two</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="home_page_name">Pet\'s Corner</string>
+
+
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="need_support_one">If you are looking for other information, chat us now and our team will help you to answer your queries.</string>
+    <string name="need_support">Looking for assistance in posting your pets or anything related to our application? Contact Us now to get started.</string>
+    <string name="change_password_desc">To continue,first verify it\'s you</string>
+    <string name="change_password">Your new password must be different from previous used passwords. </string>
+
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, repellat, voluptatem. Aperiam assumenda consectetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolore enim odit perspiciatis sequi ullam vero vitae. Aperiam aut, deleniti harum illo iusto magni maxime molestias quasi, sapiente totam ullam!</string>
+    <string name="visitSite">Visit Website</string>
+    <string name="pet_request_tagline">Describe the pet you require and it will be immediately updated into the system.</string>
+
+    <string name="safety_tips">Meet the seller in person and transfer cash only if you have secured the item. As a seller, ensure that you have secured your payment and safely exchanged your item.We will not responsible for any fraudulent activity done by users.</string>
+
+    <!--    string for  dropdown menu-->
+    <string-array name="choose_category">
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <!--    string for  dropdown menu-->
+    <string-array name="choose_pet_category">
+        <item>Pet Category</item>
+        <item>Dogs</item>
+        <item>Cats</item>
+        <item>Birds</item>
+        <item>Hens</item>
+        <item>Fishes</item>
+    </string-array>
+
+    <!--    string for  dropdown menu-->
+    <string-array name="price_category">
+        <item>Price Type</item>
+        <item>Fixed</item>
+        <item>Negotiable</item>
+    </string-array>
+
+    <string name="home_page">Home Page</string>
+    <string name="my_profile">My Profile</string>
+    <string name="contact_us_page">Get In Touch</string>
+    <string name="createAccount1">Account Verification</string>
+    <string name="Reset_Password">Reset Password</string>
+    <string name="Upload_Profile_Picture">Upload Profile Picture</string>
+    <string name="Add_Event">Add_Event</string>
+    <string name="Upload_Pet_Details">Upload Pet Details</string>
+    <string name="Pet_request">Pet Request</string>
+    <string name="Pet_requests">Pet Requests</string>
+    <string name="Events">Events</string>
+    <string name="Event_Details">Event Details</string>
+    <string name="Pets">Pets</string>
+    <string name="Pet_Details">Pet Details</string>
+    <string name="Find_a_Pet">Find a pet</string>
+    <string name="Your_Best_Match">Best Match</string>
+    <string name="title_activity_my_uploads_posts">My_Uploads_Posts</string>
+    <string name="tab_text_1">Pets</string>
+    <string name="tab_text_2">Requests</string>
+    <string name="tab_text_3">Events</string>
+</resources>
